@@ -1,43 +1,60 @@
-const data = [
-  // Días 1-10: Para enamorarla (coqueteo y primeros sentimientos)
-  { phrase: "Día 1: Me encanta descubrir todo lo que te hace única.", video: "https://youtu.be/wmox3Sxn8BU?si=FiWwt4r7_O9HRRkt" },
-  { phrase: "Día 2: No sé si lo notas, pero contigo todo se vuelve especial.", video: "https://www.youtube.com/embed/M0K9YbXyCNc" },
-  { phrase: "Día 3: Tu sonrisa tiene algo que me inspira todos los días.", video: "https://www.youtube.com/embed/pa14VNsdSYM" },
-  { phrase: "Día 4: Eres como un mar tranquilo que quiero explorar.", video: "https://www.youtube.com/embed/Dz_0LyoaF1c" },
-  { phrase: "Día 5: Me gustaría ser esa razón que te haga sonreír sin pensarlo.", video: "https://www.youtube.com/embed/Y5YQwQLJULw" },
-  { phrase: "Día 6: Contigo, los días pasan volando.", video: "https://www.youtube.com/embed/EiY7F0ohEAA" },
-  { phrase: "Día 7: A veces me descubro pensando en ti sin razón.", video: "https://www.youtube.com/embed/lilZhuuYmvI" },
-  { phrase: "Día 8: No hay distancia cuando pienso en ti.", video: "https://www.youtube.com/embed/NGz_Bd7lM4o" },
-  { phrase: "Día 9: Cada día a tu lado es una nueva aventura.", video: "https://www.youtube.com/embed/V9kPntpNNDw" },
-  { phrase: "Día 10: Si te veo feliz, me siento afortunado.", video: "https://www.youtube.com/embed/wqrmvA20qN0" },
-
-  // Días 11-20: Nos estamos enamorando (crece el vínculo)
-  { phrase: "Día 11: Hay algo mágico en cada momento a tu lado.", video: "https://www.youtube.com/embed/gocJpIwr7Co" },
-  { phrase: "Día 12: No necesito mucho, solo verte sonreír.", video: "https://www.youtube.com/embed/YL2i4w6ua5Y" },
-  { phrase: "Día 13: Hay algo en ti que me hace querer quedarme para siempre.", video: "https://www.youtube.com/embed/vGJTaP6anOU" },
-  { phrase: "Día 14: Eres perfectamente imperfecta para mí.", video: "https://www.youtube.com/embed/450p7goxZqg" },
-  { phrase: "Día 15: Quisiera ser quien te dé calma y abrigo.", video: "https://www.youtube.com/embed/wslLDwRjYhQ" },
-  { phrase: "Día 16: Me pierdo en tus ojos cada vez que te miro.", video: "https://www.youtube.com/embed/vKpfrbK4g_A" },
-  { phrase: "Día 17: Hay secretos que solo se entienden con el corazón.", video: "https://www.youtube.com/embed/j3nTdQkecq0" },
-  { phrase: "Día 18: Siento que juntos podríamos bailar por horas.", video: "https://www.youtube.com/embed/_JPfZ-mTWrA" },
-  { phrase: "Día 19: Poco a poco, te vas volviendo mi lugar favorito.", video: "https://www.youtube.com/embed/MKkxazCN3Zk" },
-  { phrase: "Día 20: A veces me atrevo a imaginar un futuro contigo.", video: "https://www.youtube.com/embed/HkR_1BzjAZQ" },
-
-  // Días 21-31: Demostrar amor y confesión
-  { phrase: "Día 21: Ojalá pueda decirte todo lo que siento.", video: "https://www.youtube.com/embed/F1E9n5ZqdCw" },
-  { phrase: "Día 22: Gracias por hacer que todo valga la pena.", video: "https://www.youtube.com/embed/XHQePPYyxMo" },
-  { phrase: "Día 23: No hay palabras suficientes para expresar lo que siento por ti.", video: "https://www.youtube.com/embed/cL_Vg6EcNsM" },
-  { phrase: "Día 24: Estar contigo es mi mejor momento del día.", video: "https://www.youtube.com/embed/wvBNB7jCWJs" },
-  { phrase: "Día 25: Eres, sin duda, mi persona favorita.", video: "https://www.youtube.com/embed/E2wM3w1Ll2g" },
-  { phrase: "Día 26: Me doy cuenta que te necesito más de lo que imaginaba.", video: "https://www.youtube.com/embed/cqkxr_4JwXY" },
-  { phrase: "Día 27: Me enamoro de ti un poco más cada día.", video: "https://www.youtube.com/embed/vGJTaP6anOU" },
-  { phrase: "Día 28: Todo lo que soy, quiero dártelo a ti.", video: "https://www.youtube.com/embed/450p7goxZqg" },
-  { phrase: "Día 29: Si hay un cuento que quiero vivir, es el nuestro.", video: "https://www.youtube.com/embed/XLwnQ_WyLWQ" },
-  { phrase: "Día 30: Ya no quiero imaginarlo, quiero vivirlo contigo.", video: "https://www.youtube.com/embed/F1E9n5ZqdCw" },
-  { phrase: "Día 31: Hoy solo quiero confesarte que te quiero, de verdad y sin miedo. Gracias por dejarme estar en tu vida. 💛", video: "https://www.youtube.com/embed/LS3mCwT3wBo" }
+// ====== CONFIGURA AQUÍ TUS DÍAS (ID o LINK DE GOOGLE DRIVE) ======
+// Puedes poner solo el ID del archivo o cualquier enlace de Drive; el código extrae el ID.
+const playlist = [
+  { phrase: "Día 1: Me encanta descubrir todo lo que te hace única.", drive: "https://drive.google.com/file/d/1EO0oU_lWMDeOy5S5u0NMQEdW5Yyx5HlJ/view?usp=drive_link" },
+  { phrase: "Día 2: Si el universo me puso en tu camino, fue por una razón.", drive: "https://drive.google.com/file/d/1xnV31_IQiOjlGrkNAHsw5V4tnjHpFwpj/view?usp=drive_link" },
+  { phrase: "Día 3: Cada vez que te miro, encuentro un nuevo motivo para sonreír.", drive: "https://drive.google.com/file/d/1cAuKhwSgOZTxfPPm8m6MzFc_9_lmsq5V/view?usp=drive_link" },
+  { phrase: "Día 4: Tu sonrisa tiene algo que me inspira todos los días.", drive: "https://drive.google.com/file/d/1v1qe1tuoQ9WIpodcGd1ob9i9udauloDE/view?usp=sharing" },
+  { phrase: "Día 5: Busco a alguien tan especial como tú.", drive: "https://drive.google.com/file/d/1b-2QW4yqExt6niHAk4z0YS0cJIiCyxA9/view?usp=sharing" },
+  { phrase: "Día 6: Tus ojos lindos me enamoran cada día.", drive: "https://drive.google.com/file/d/1map-oPwAtNlPrT8gUaOmoqZwa9JU0nkK/view?usp=drive_link" },
+  { phrase: "Día 7: Eres perfecta tal como eres.", drive: "https://drive.google.com/file/d/1ZgHvYlPfv_Jl2Y7APm-oOWwvpSHVgJu_/view?usp=drive_link" },
+  { phrase: "Día 8: Energía, deseo de estar juntos, alegría sencilla.", drive: "https://drive.google.com/file/d/1N8iI0OjmHKQ55xKZdIlAIEcbQ4IMHqlB/view?usp=drive_link" },
+  { phrase: "Día 9: Todo lo bueno eres tú.", drive: "https://drive.google.com/file/d/1Mzwwpb4tECSVhhdIp2bz7d7U9tEMH9vD/view?usp=drive_link" },
+  
+  
+  
+  
+  { phrase: "Día 10: Me encanta descubrir todo lo que te hace única.", drive: "https://drive.google.com/file/d/1EO0oU_lWMDeOy5S5u0NMQEdW5Yyx5HlJ/view?usp=drive_link" },
+  { phrase: "Día 11: Me encanta descubrir todo lo que te hace única.", drive: "https://drive.google.com/file/d/1EO0oU_lWMDeOy5S5u0NMQEdW5Yyx5HlJ/view?usp=drive_link" },
+  { phrase: "Día 12: Si el universo me puso en tu camino, fue por una razón.", drive: "https://drive.google.com/file/d/1ZyX_demoID_123456789/view?usp=sharing" },
+  { phrase: "Día 13: Cada vez que te miro, encuentro un nuevo motivo para sonreír.", drive: "1AnotherDriveIDXXXXXXXXXXXX" },
+  { phrase: "Día 14: Me encanta descubrir todo lo que te hace única.", drive: "https://drive.google.com/file/d/1EO0oU_lWMDeOy5S5u0NMQEdW5Yyx5HlJ/view?usp=drive_link" },
+  { phrase: "Día 15: Me encanta descubrir todo lo que te hace única.", drive: "https://drive.google.com/file/d/1EO0oU_lWMDeOy5S5u0NMQEdW5Yyx5HlJ/view?usp=drive_link" },
+  { phrase: "Día 16: Me encanta descubrir todo lo que te hace única.", drive: "https://drive.google.com/file/d/1EO0oU_lWMDeOy5S5u0NMQEdW5Yyx5HlJ/view?usp=drive_link" },
+  { phrase: "Día 17: Me encanta descubrir todo lo que te hace única.", drive: "https://drive.google.com/file/d/1EO0oU_lWMDeOy5S5u0NMQEdW5Yyx5HlJ/view?usp=drive_link" },
+  { phrase: "Día 18: Me encanta descubrir todo lo que te hace única.", drive: "https://drive.google.com/file/d/1EO0oU_lWMDeOy5S5u0NMQEdW5Yyx5HlJ/view?usp=drive_link" },
+  { phrase: "Día 19: Me encanta descubrir todo lo que te hace única.", drive: "https://drive.google.com/file/d/1EO0oU_lWMDeOy5S5u0NMQEdW5Yyx5HlJ/view?usp=drive_link" },
+  // ...agrega todos tus días con su 'drive' (ID o link)
 ];
 
-// Animación de corazones para el día 31
+// ====== UTILIDADES GOOGLE DRIVE ======
+function getDriveId(input) {
+  if (!input) return null;
+  // formatos soportados:
+  // https://drive.google.com/file/d/FILE_ID/view
+  // https://drive.google.com/open?id=FILE_ID
+  // FILE_ID directo
+  const m1 = input.match(/\/d\/([A-Za-z0-9_-]+)/);
+  if (m1) return m1[1];
+  const m2 = input.match(/[?&]id=([A-Za-z0-9_-]+)/);
+  if (m2) return m2[1];
+  // si ya parece un id
+  if (/^[A-Za-z0-9_-]+$/.test(input)) return input;
+  return null;
+}
+
+function driveEmbedUrl(id) {
+  return `https://drive.google.com/file/d/${id}/preview`;
+}
+function driveViewUrl(id) {
+  return `https://drive.google.com/file/d/${id}/view`;
+}
+function driveThumbUrl(id) {
+  // Miniatura de alta resolución (si está disponible para el tipo de archivo)
+  return `https://drive.google.com/thumbnail?id=${id}&sz=w1000`;
+}
+
+// ====== ANIMACIÓN CORAZONES DÍA 31 ======
 function throwHearts() {
   const container = document.getElementById('hearts-container');
   if (!container) return;
@@ -52,48 +69,88 @@ function throwHearts() {
   }
 }
 
-const calendar = document.getElementById('calendar');
+// ====== RENDER DEL DÍA ======
+function mostrarDia(idx) {
+  const info = playlist[idx];
+  const fileId = getDriveId(info.drive);
+
+  // HTML base (frase + contenedor de video + fallback)
+  document.getElementById('dia-container').innerHTML = `
+    <div class="frase-dia">${info.phrase}</div>
+    <div class="video-dia">
+      ${fileId ? `
+        <iframe
+          id="love-iframe"
+          src="${driveEmbedUrl(fileId)}"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      ` : `
+        <div class="video-fallback" id="iframe-fallback" style="display:flex;">
+          <img src="https://i.imgur.com/fS5Zqom.png" alt="Frase de amor"/>
+          <div>El video no está configurado. ¡Pero igual quiero que leas la frase de hoy! 💛</div>
+        </div>
+      `}
+      <div class="video-fallback" id="iframe-fallback" style="display:none;">
+        <img src="${fileId ? driveThumbUrl(fileId) : 'https://i.imgur.com/fS5Zqom.png'}" alt="Vista previa"/>
+        <div style="margin-bottom:0.8rem;">No se pudo mostrar el video aquí.<br/>Ábrelo directamente en Google Drive.</div>
+        ${fileId ? `<a class="btn-open-drive" href="${driveViewUrl(fileId)}" target="_blank">Abrir en Drive</a>` : ''}
+      </div>
+    </div>
+  `;
+
+  // Detección de error de carga (algunos navegadores no disparan onerror para iframes de Drive)
+  setTimeout(() => {
+    const iframe = document.getElementById('love-iframe');
+    const fallback = document.getElementById('iframe-fallback');
+    if (iframe) {
+      // Si el iframe no ocupa espacio (posible bloqueo/permisos), mostramos fallback
+      const tooSmall = iframe.offsetHeight < 40 || iframe.offsetWidth < 40;
+      if (tooSmall) {
+        iframe.style.display = 'none';
+        fallback.style.display = 'flex';
+      }
+    }
+  }, 2000);
+
+  if (idx === 30) throwHearts();
+
+  // Actualizar estado de botones
+  const botones = navDias.querySelectorAll('.btn-dia');
+  botones.forEach((btn, i) => {
+    if (i === idx) btn.classList.add('active');
+    else btn.classList.remove('active');
+  });
+}
+
+// ====== INICIALIZACIÓN Y NAVEGACIÓN ======
+const container = document.getElementById('dia-container');
 const mensajeEspera = document.getElementById('mensaje-espera');
+const navDias = document.getElementById('nav-dias');
 const today = new Date();
 const day = today.getDate();
 const month = today.getMonth() + 1;
-const ADVENT_MONTH = month; // Puedes fijar a otro mes si quieres
+const ADVENT_MONTH = month; // puedes fijarlo a un mes concreto si quieres
 
-function createCard(idx, unlocked) {
-  const info = data[idx];
-  const card = document.createElement('div');
-  card.className = 'card' + (unlocked ? '' : ' locked');
-  card.innerHTML = `
-    <div class="number">${idx + 1}</div>
-    <div class="phrase" style="display: none;">${info.phrase}</div>
-    <div class="video"></div>
-  `;
-  if (unlocked) {
-    card.addEventListener('click', function() {
-      if (!card.classList.contains('open')) {
-        card.classList.add('open');
-        card.querySelector('.phrase').style.display = 'block';
-        card.querySelector('.video').innerHTML = `
-          <iframe width="100%" height="160" src="${info.video}" 
-            frameborder="0" allowfullscreen></iframe>
-        `;
-        if (idx === 30) throwHearts();
-      }
-    });
-  }
-  return card;
-}
+let diaActual = Math.min(day, playlist.length);
 
-// Muestra solo las casillas correspondientes al día actual o anteriores
-let cardsCreadas = 0;
-for (let i = 0; i < data.length; i++) {
-  if (day >= (i + 1) && month === ADVENT_MONTH) {
-    calendar.appendChild(createCard(i, true));
-    cardsCreadas++;
+function renderNavDias() {
+  navDias.innerHTML = "";
+  for (let i = 0; i < diaActual; i++) {
+    const btn = document.createElement('button');
+    btn.className = "btn-dia" + (i === diaActual - 1 ? " active" : "");
+    btn.textContent = `Día ${i + 1}`;
+    btn.onclick = () => mostrarDia(i);
+    navDias.appendChild(btn);
   }
 }
 
-// Si faltan días, muestra mensaje de "vuelve mañana"
-if (cardsCreadas < data.length) {
+if (day >= 1 && day <= playlist.length && month === ADVENT_MONTH) {
+  renderNavDias();
+  mostrarDia(diaActual - 1);
+  mensajeEspera.style.display = 'none';
+} else {
+  container.style.display = 'none';
+  navDias.style.display = 'none';
   mensajeEspera.style.display = 'block';
 }
