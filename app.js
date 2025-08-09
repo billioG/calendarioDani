@@ -14,7 +14,7 @@ const playlist = [
   
   
   
-  { phrase: "Día 10: Me encanta descubrir todo lo que te hace única.", drive: "https://drive.google.com/file/d/1EO0oU_lWMDeOy5S5u0NMQEdW5Yyx5HlJ/view?usp=drive_link" },
+  { phrase: "Día 10: Quiero pasar mis domingos a tu lado.", drive: "https://drive.google.com/file/d/1aT_4QpetS6Xn5k9r5TIVLNbErSLlyvJb/view?usp=drive_link" },
   { phrase: "Día 11: Me encanta descubrir todo lo que te hace única.", drive: "https://drive.google.com/file/d/1EO0oU_lWMDeOy5S5u0NMQEdW5Yyx5HlJ/view?usp=drive_link" },
   { phrase: "Día 12: Si el universo me puso en tu camino, fue por una razón.", drive: "https://drive.google.com/file/d/1ZyX_demoID_123456789/view?usp=sharing" },
   { phrase: "Día 13: Cada vez que te miro, encuentro un nuevo motivo para sonreír.", drive: "1AnotherDriveIDXXXXXXXXXXXX" },
@@ -154,3 +154,4 @@ if (day >= 1 && day <= playlist.length && month === ADVENT_MONTH) {
   navDias.style.display = 'none';
   mensajeEspera.style.display = 'block';
 }
+
