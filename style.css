@@ -6,8 +6,9 @@
   --card: #fffbe6;
   --locked: #f5f5f5;
   --text: #735f32;
-  --number: #d4a60c;
   --shadow: 0 2px 10px #ffe06680;
+  --btn: #ffe066;
+  --btn-text: #78613b;
 }
 
 body {
@@ -27,14 +28,8 @@ header, footer {
   letter-spacing: 1px;
 }
 
-header {
-  border-radius: 0 0 2rem 2rem;
-}
-
-footer {
-  border-radius: 2rem 2rem 0 0;
-  margin-top: 2rem;
-}
+header { border-radius: 0 0 2rem 2rem; }
+footer { border-radius: 2rem 2rem 0 0; margin-top: 2rem; }
 
 h1 {
   margin: 0.5rem 0;
@@ -45,108 +40,149 @@ h1 {
 }
 
 main {
-  padding: 1.2rem 0.3rem;
-  max-width: 500px;
+  min-height: 80vh;
+  max-width: 900px;
   margin: auto;
-}
-
-.calendar-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  max-width: 500px;
-  margin: auto;
-}
-
-.card {
-  background: var(--card);
-  border-radius: 1.4rem;
-  box-shadow: var(--shadow);
-  padding: 1rem;
-  text-align: center;
-  min-height: 110px;
+  padding: 2rem 0.7rem 2rem 0.7rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: box-shadow .18s, transform .15s;
-  position: relative;
-  border: 2px solid var(--secondary);
-  opacity: 0;
-  transform: scale(0.96) translateY(18px);
-  animation: showCard 0.8s cubic-bezier(.5,.9,.2,1.1) forwards;
 }
 
-@keyframes showCard {
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
+.dia-container {
+  background: var(--card);
+  border-radius: 2rem;
+  box-shadow: var(--shadow);
+  padding: 3.5rem 2rem 2.7rem 2rem;
+  min-height: 440px;
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn .9s cubic-bezier(.5,.9,.2,1.1) both;
+  margin-bottom: 2rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97) translateY(22px);}
+  to   { opacity: 1; transform: scale(1) translateY(0);}
+}
+
+@media (max-width: 700px) {
+  .dia-container {
+    min-height: 330px;
+    max-width: 100vw;
+    padding: 2rem 0.5rem 2rem 0.5rem;
+    border-radius: 1.2rem;
+  }
+  main {
+    max-width: 99vw;
+    padding: 1.2rem 0.1rem 1.3rem 0.1rem;
   }
 }
 
-.card:hover:not(.locked) {
-  box-shadow: 0 4px 18px #ffd6e0;
-  transform: scale(1.04);
+.frase-dia {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #4f3a18;
+  margin-bottom: 2.2rem;
+  text-align: center;
+  line-height: 1.18;
+}
+@media (max-width: 700px) {
+  .frase-dia { font-size: 1.3rem; margin-bottom: 1.6rem; }
 }
 
-.card.locked {
-  background: var(--locked);
-  color: #c9b77e;
-  cursor: not-allowed;
-  box-shadow: none;
-  border: 2px dashed #ffe06690;
-}
-
-.card .number {
-  font-size: 2.2rem;
-  font-weight: bold;
-  margin-bottom: .3rem;
-  color: var(--number);
-  text-shadow: 0 1px 0 #fff9db;
-}
-
-.card .phrase {
-  margin-top: .7rem;
-  font-size: 1.05rem;
-  color: #735f32;
-  font-weight: 600;
-}
-
-.card .video {
-  margin-top: .6rem;
-  display: none;
-}
-
-.card.open .video {
-  display: block;
-  border-radius: 0.8rem;
+.video-dia {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 1.3rem;
   overflow: hidden;
-  box-shadow: 0 2px 6px #ffd6e080;
-  margin-top: 1rem;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 3px 16px #ffe06660;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Animación de corazones */
-.hearts-container {
-  pointer-events: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 9999;
+.video-dia iframe {
+  width: 100%;
+  height: 340px;
+  border: 0;
+}
+@media (max-width: 700px) {
+  .video-dia iframe { height: 200px; }
 }
 
+.video-fallback {
+  width: 100%;
+  max-width: 520px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background: var(--locked);
+  border-radius: 1.2rem;
+  padding: 1.2rem;
+  margin-top: 0.8rem;
+  box-shadow: 0 3px 16px #ffe06640;
+  font-size: 1.05rem;
+  color: #a48c35;
+  text-align: center;
+}
+
+.video-fallback img {
+  width: 86%;
+  max-width: 520px;
+  border-radius: 1rem;
+  margin-bottom: 0.9rem;
+  box-shadow: 0 2px 10px #00000020;
+}
+
+.video-fallback .btn-open-drive {
+  background: var(--accent);
+  color: #735f32;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.7rem 1.6rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 1px 7px #ffd6e055;
+  transition: background 0.17s;
+}
+.video-fallback .btn-open-drive:hover { background: var(--primary); color: #a48c35; }
+
+#mensaje-espera { font-size: 1.2rem; margin-top: 2rem; }
+
+.nav-dias {
+  display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 1.4rem;
+}
+
+.btn-dia {
+  background: var(--btn);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 1.4rem;
+  padding: 0.6rem 1.3rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 1px 6px #ffd6e050;
+  transition: background 0.17s;
+}
+.btn-dia.active, .btn-dia:hover { background: var(--accent); color: #a48c35; }
+
+.hearts-container { pointer-events: none; position: fixed; left: 0; top: 0; width: 100vw; height: 100vh; z-index: 9999; }
 .heart {
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  background: url('https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/72x72/1f49b.png') no-repeat center center / contain;
-  opacity: 0.7;
-  animation: floatHearts 2.5s linear forwards;
+  position: absolute; width: 32px; height: 32px;
+  background: url('https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/72x72/1f49b.png') no-repeat center / contain;
+  opacity: 0.7; animation: floatHearts 2.5s linear forwards;
 }
-
 @keyframes floatHearts {
-  0% {
-    transform: translateY(0) scale(0.8) rotate(-10deg);
-  }
+  0% { transform: translateY(0) scale(0.8) rotate(-10deg); opacity: 0.8; }
+  100% { transform: translateY(-80vh) scale(1.2) rotate(20deg); opacity: 0; }
 }
