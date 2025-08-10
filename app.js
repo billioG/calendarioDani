@@ -10,20 +10,12 @@ const playlist = [
   { phrase: "Día 7: Eres perfecta tal como eres.", drive: "https://drive.google.com/file/d/1ZgHvYlPfv_Jl2Y7APm-oOWwvpSHVgJu_/view?usp=drive_link" },
   { phrase: "Día 8: Energía, deseo de estar juntos, alegría sencilla.", drive: "https://drive.google.com/file/d/1N8iI0OjmHKQ55xKZdIlAIEcbQ4IMHqlB/view?usp=drive_link" },
   { phrase: "Día 9: Todo lo bueno eres tú.", drive: "https://drive.google.com/file/d/1Mzwwpb4tECSVhhdIp2bz7d7U9tEMH9vD/view?usp=drive_link" },
-  
-  
-  
-  
   { phrase: "Día 10: Quiero pasar mis domingos a tu lado.", drive: "https://drive.google.com/file/d/1aT_4QpetS6Xn5k9r5TIVLNbErSLlyvJb/view?usp=drive_link" },
-  { phrase: "Día 11: Me encanta descubrir todo lo que te hace única.", drive: "https://drive.google.com/file/d/1EO0oU_lWMDeOy5S5u0NMQEdW5Yyx5HlJ/view?usp=drive_link" },
-  { phrase: "Día 12: Si el universo me puso en tu camino, fue por una razón.", drive: "https://drive.google.com/file/d/1ZyX_demoID_123456789/view?usp=sharing" },
-  { phrase: "Día 13: Cada vez que te miro, encuentro un nuevo motivo para sonreír.", drive: "1AnotherDriveIDXXXXXXXXXXXX" },
-  { phrase: "Día 14: Me encanta descubrir todo lo que te hace única.", drive: "https://drive.google.com/file/d/1EO0oU_lWMDeOy5S5u0NMQEdW5Yyx5HlJ/view?usp=drive_link" },
-  { phrase: "Día 15: Me encanta descubrir todo lo que te hace única.", drive: "https://drive.google.com/file/d/1EO0oU_lWMDeOy5S5u0NMQEdW5Yyx5HlJ/view?usp=drive_link" },
-  { phrase: "Día 16: Me encanta descubrir todo lo que te hace única.", drive: "https://drive.google.com/file/d/1EO0oU_lWMDeOy5S5u0NMQEdW5Yyx5HlJ/view?usp=drive_link" },
-  { phrase: "Día 17: Me encanta descubrir todo lo que te hace única.", drive: "https://drive.google.com/file/d/1EO0oU_lWMDeOy5S5u0NMQEdW5Yyx5HlJ/view?usp=drive_link" },
-  { phrase: "Día 18: Me encanta descubrir todo lo que te hace única.", drive: "https://drive.google.com/file/d/1EO0oU_lWMDeOy5S5u0NMQEdW5Yyx5HlJ/view?usp=drive_link" },
-  { phrase: "Día 19: Me encanta descubrir todo lo que te hace única.", drive: "https://drive.google.com/file/d/1EO0oU_lWMDeOy5S5u0NMQEdW5Yyx5HlJ/view?usp=drive_link" },
+  { phrase: "Día 11: Eres esa curita que llego en el momento justo.", drive: "https://drive.google.com/file/d/1pTowTbdl9DR0NAqEonFBDytw0_uKPWRb/view?usp=drive_link" },
+
+  { phrase: "Día 12: Eres ese rayo de luz que alumbra mis días.", drive: "https://drive.google.com/file/d/1D2OgeHYS2NYvDLea3d46kRXR_B8XIHj_/view?usp=drive_link" },
+  { phrase: "Día 13: Quiero pintar una linda sonrisa en tu rostro cada día.", drive: "https://drive.google.com/file/d/1gG6DYpiMz1SYc5-rkMXDKOppNuVGEjet/view?usp=drive_link" },
+  
   // ...agrega todos tus días con su 'drive' (ID o link)
 ];
 
@@ -154,4 +146,5 @@ if (day >= 1 && day <= playlist.length && month === ADVENT_MONTH) {
   navDias.style.display = 'none';
   mensajeEspera.style.display = 'block';
 }
+
 
